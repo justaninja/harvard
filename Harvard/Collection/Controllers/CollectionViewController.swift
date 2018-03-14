@@ -1,5 +1,5 @@
 //
-//  HighlightsViewController.swift
+//  CollectionViewController.swift
 //  Harvard
 //
 //  Created by Konstantin Khokhlov on 14.03.2018.
@@ -8,5 +8,5 @@
 
 import UIKit
 
-class HighlightsViewController: UIViewController {
+class CollectionViewController: UIViewController {
 }

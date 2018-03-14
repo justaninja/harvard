@@ -10,13 +10,26 @@ import UIKit
 
 /// Represents screens for the app.
 ///
-/// - highlights: Highlights screen.
+/// - highlights: Collection screen.
 /// - magazine: Magazine screen.
 enum Scene: String {
 
-    case highlights, magazine
+    case collection, magazine
 
-    var storyboard: UIStoryboard {
-        return UIStoryboard(name: self.rawValue.uppercased(), bundle: nil)
+    private var storyboard: UIStoryboard {
+        return UIStoryboard(name: rawValue.capitalized, bundle: nil)
     }
+
+    var title: String {
+        return rawValue.capitalized
+    }
+
+    var controller: UIViewController? {
+        return storyboard.instantiateInitialViewController()
+    }
+
+    var barItem: UITabBarItem {
+        return UITabBarItem(title: title, image: nil, selectedImage: nil)
+    }
+
 }
