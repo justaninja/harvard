@@ -16,6 +16,7 @@
 		CFCB5557205922DE00E4F720 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB5556205922DE00E4F720 /* MainViewController.swift */; };
 		CFCB555A205923B300E4F720 /* HighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB5559205923B300E4F720 /* HighlightsViewController.swift */; };
 		CFCB555D20592AF100E4F720 /* MagazineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB555C20592AF100E4F720 /* MagazineViewController.swift */; };
+		CFCB556020592EBA00E4F720 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB555F20592EBA00E4F720 /* Scene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CFCB5556205922DE00E4F720 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../../../../harvard/Harvard/App/Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		CFCB5559205923B300E4F720 /* HighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewController.swift; sourceTree = "<group>"; };
 		CFCB555C20592AF100E4F720 /* MagazineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MagazineViewController.swift; path = ../../../../harvard/Harvard/Magazine/Controllers/MagazineViewController.swift; sourceTree = "<group>"; };
+		CFCB555F20592EBA00E4F720 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Scene.swift; path = ../../../../harvard/Harvard/App/Scenes/Scene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		CFCB55422059055500E4F720 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CFCB555E20592C5500E4F720 /* Scenes */,
 				CFCB5555205922A800E4F720 /* Controllers */,
 				CFCB55452059057400E4F720 /* Storyboards */,
 				CFCB55442059056A00E4F720 /* Resources */,
@@ -162,6 +165,14 @@
 				CFCB555C20592AF100E4F720 /* MagazineViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CFCB555E20592C5500E4F720 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CFCB555F20592EBA00E4F720 /* Scene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				CFCB55312059048400E4F720 /* AppDelegate.swift in Sources */,
 				CFCB555A205923B300E4F720 /* HighlightsViewController.swift in Sources */,
+				CFCB556020592EBA00E4F720 /* Scene.swift in Sources */,
 				CFCB555D20592AF100E4F720 /* MagazineViewController.swift in Sources */,
 				CFCB5557205922DE00E4F720 /* MainViewController.swift in Sources */,
 			);
