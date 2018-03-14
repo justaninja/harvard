@@ -14,7 +14,7 @@
 		CFCB5554205920B800E4F720 /* Magazine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCB5553205920B800E4F720 /* Magazine.storyboard */; };
 		CFCB5557205922DE00E4F720 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB5556205922DE00E4F720 /* MainViewController.swift */; };
 		CFCB555D20592AF100E4F720 /* MagazineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB555C20592AF100E4F720 /* MagazineViewController.swift */; };
-		CFCB556020592EBA00E4F720 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB555F20592EBA00E4F720 /* Scene.swift */; };
+		CFCB556020592EBA00E4F720 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB555F20592EBA00E4F720 /* Screen.swift */; };
 		CFCB556820594F3A00E4F720 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB556720594F3A00E4F720 /* CollectionViewController.swift */; };
 		CFCB556A20594F4900E4F720 /* Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCB556920594F4900E4F720 /* Collection.storyboard */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 		CFCB5553205920B800E4F720 /* Magazine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Magazine.storyboard; path = ../../../../harvard/Harvard/Magazine/Storyboards/Magazine.storyboard; sourceTree = "<group>"; };
 		CFCB5556205922DE00E4F720 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../../../../harvard/Harvard/App/Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		CFCB555C20592AF100E4F720 /* MagazineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MagazineViewController.swift; path = ../../../../harvard/Harvard/Magazine/Controllers/MagazineViewController.swift; sourceTree = "<group>"; };
-		CFCB555F20592EBA00E4F720 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Scene.swift; path = ../../../../harvard/Harvard/App/Scenes/Scene.swift; sourceTree = "<group>"; };
+		CFCB555F20592EBA00E4F720 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		CFCB556720594F3A00E4F720 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewController.swift; path = ../../../../harvard/Harvard/Collection/Controllers/CollectionViewController.swift; sourceTree = "<group>"; };
 		CFCB556920594F4900E4F720 /* Collection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Collection.storyboard; path = ../../../../harvard/Harvard/Collection/Storyboards/Collection.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +145,7 @@
 		CFCB555E20592C5500E4F720 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CFCB555F20592EBA00E4F720 /* Scene.swift */,
+				CFCB555F20592EBA00E4F720 /* Screen.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFCB55312059048400E4F720 /* AppDelegate.swift in Sources */,
-				CFCB556020592EBA00E4F720 /* Scene.swift in Sources */,
+				CFCB556020592EBA00E4F720 /* Screen.swift in Sources */,
 				CFCB555D20592AF100E4F720 /* MagazineViewController.swift in Sources */,
 				CFCB5557205922DE00E4F720 /* MainViewController.swift in Sources */,
 				CFCB556820594F3A00E4F720 /* CollectionViewController.swift in Sources */,

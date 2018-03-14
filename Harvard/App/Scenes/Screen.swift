@@ -12,9 +12,10 @@ import UIKit
 ///
 /// - highlights: Collection screen.
 /// - magazine: Magazine screen.
-enum Scene: String {
+/// - about: About screen.
+enum Screen: String {
 
-    case collection, magazine
+    case collection, magazine, about
 
     private var storyboard: UIStoryboard {
         return UIStoryboard(name: rawValue.capitalized, bundle: nil)
@@ -31,5 +32,4 @@ enum Scene: String {
     var barItem: UITabBarItem {
         return UITabBarItem(title: title, image: nil, selectedImage: nil)
     }
-
 }

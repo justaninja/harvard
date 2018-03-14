@@ -16,13 +16,13 @@ class MainViewController: UITabBarController {
 
         viewControllers?.removeAll()
 
-        let collection = Scene.collection
+        let collection = Screen.collection
         if let collectionController = collection.controller {
             collectionController.tabBarItem = collection.barItem
             viewControllers?.append(collectionController)
         }
 
-        let magazine = Scene.magazine
+        let magazine = Screen.magazine
         if let magazineViewController = magazine.controller {
             magazineViewController.tabBarItem = magazine.barItem
             viewControllers?.append(magazineViewController)
