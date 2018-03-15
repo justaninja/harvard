@@ -7,6 +7,18 @@
 //
 
 import UIKit
+import WebKit
 
 class MagazineViewController: UIViewController {
+
+    // MARK: - Outlets
+    @IBOutlet private weak var webView: WKWebView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        guard let url = URL(string: "https://www.harvardartmuseums.org/index-magazine") else { return }
+        let request = URLRequest(url: url)
+        webView.load(request)
+    }
 }
