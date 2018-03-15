@@ -10,22 +10,19 @@ import UIKit
 
 class MainViewController: UITabBarController {
 
+    // MARK: - Properties
+    private let screens: [Screen] = [.collection, .magazine, .about]
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         viewControllers?.removeAll()
 
-        let collection = Screen.collection
-        if let collectionController = collection.controller {
-            collectionController.tabBarItem = collection.barItem
-            viewControllers?.append(collectionController)
-        }
-
-        let magazine = Screen.magazine
-        if let magazineViewController = magazine.controller {
-            magazineViewController.tabBarItem = magazine.barItem
-            viewControllers?.append(magazineViewController)
+        screens.forEach { screen in
+            guard let controller = screen.controller else { return }
+            controller.tabBarItem = screen.barItem
+            viewControllers?.append(controller)
         }
     }
 }

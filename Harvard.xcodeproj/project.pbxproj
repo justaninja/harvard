@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF5396B3205A712E0039445A /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5396B2205A712E0039445A /* About.storyboard */; };
+		CF5396B5205A71540039445A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5396B4205A71540039445A /* AboutViewController.swift */; };
 		CFCB55312059048400E4F720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB55302059048400E4F720 /* AppDelegate.swift */; };
 		CFCB55362059048400E4F720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCB55342059048400E4F720 /* Main.storyboard */; };
 		CFCB55382059048400E4F720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFCB55372059048400E4F720 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF5396B2205A712E0039445A /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		CF5396B4205A71540039445A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CFCB552D2059048400E4F720 /* Harvard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harvard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCB55302059048400E4F720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFCB55352059048400E4F720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +49,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF5396AF205A70C90039445A /* About */ = {
+			isa = PBXGroup;
+			children = (
+				CF5396B0205A71040039445A /* Controllers */,
+				CF5396B1205A71140039445A /* Storyboards */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		CF5396B0205A71040039445A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF5396B4205A71540039445A /* AboutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CF5396B1205A71140039445A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CF5396B2205A712E0039445A /* About.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		CFCB55242059048400E4F720 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +96,7 @@
 				CFCB55422059055500E4F720 /* App */,
 				CFCB556420594EB200E4F720 /* Collection */,
 				CFCB554E2059206F00E4F720 /* Magazine */,
+				CF5396AF205A70C90039445A /* About */,
 			);
 			path = Harvard;
 			sourceTree = "<group>";
@@ -237,6 +267,7 @@
 			files = (
 				CFCB553B2059048400E4F720 /* LaunchScreen.storyboard in Resources */,
 				CFCB5554205920B800E4F720 /* Magazine.storyboard in Resources */,
+				CF5396B3205A712E0039445A /* About.storyboard in Resources */,
 				CFCB55382059048400E4F720 /* Assets.xcassets in Resources */,
 				CFCB55362059048400E4F720 /* Main.storyboard in Resources */,
 				CFCB556A20594F4900E4F720 /* Collection.storyboard in Resources */,
@@ -267,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5396B5205A71540039445A /* AboutViewController.swift in Sources */,
 				CFCB55312059048400E4F720 /* AppDelegate.swift in Sources */,
 				CFCB556020592EBA00E4F720 /* Screen.swift in Sources */,
 				CFCB555D20592AF100E4F720 /* MagazineViewController.swift in Sources */,
