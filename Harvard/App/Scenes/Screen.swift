@@ -15,10 +15,28 @@ import UIKit
 /// - about: About screen.
 enum Screen: String {
 
-    case collection, magazine, about
+    case collection, magazine, plan, about
 
     private var storyboard: UIStoryboard {
-        return UIStoryboard(name: rawValue.capitalized, bundle: nil)
+        switch self {
+        case .collection:
+            return UIStoryboard(name: rawValue.capitalized, bundle: nil)
+        case .magazine, .plan, .about:
+            return UIStoryboard(name: "Web", bundle: nil)
+        }
+    }
+
+    private var url: URL? {
+        switch self {
+        case .collection:
+            return nil
+        case .magazine:
+            return URL(string: "https://www.harvardartmuseums.org/index-magazine")
+        case .about:
+            return URL(string: "https://www.harvardartmuseums.org/about")
+        case .plan:
+            return URL(string: "https://www.harvardartmuseums.org/visit/floor-plan/1")
+        }
     }
 
     var title: String {
@@ -26,7 +44,9 @@ enum Screen: String {
     }
 
     var controller: UIViewController? {
-        return storyboard.instantiateInitialViewController()
+        let controller = storyboard.instantiateInitialViewController()
+        (controller as? WebViewController)?.url = url
+        return controller
     }
 
     var barItem: UITabBarItem {

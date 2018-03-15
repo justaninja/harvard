@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UITabBarController {
 
     // MARK: - Properties
-    private let screens: [Screen] = [.collection, .magazine, .about]
+    private let screens: [Screen] = [.collection, .magazine, .plan, .about]
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
