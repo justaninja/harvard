@@ -18,18 +18,13 @@ enum Screen: String {
     case collection, magazine, plan, about
 
     private var storyboard: UIStoryboard {
-        switch self {
-        case .collection:
-            return UIStoryboard(name: rawValue.capitalized, bundle: nil)
-        case .magazine, .plan, .about:
-            return UIStoryboard(name: "Web", bundle: nil)
-        }
+        return UIStoryboard(name: "Web", bundle: nil)
     }
 
     private var url: URL? {
         switch self {
         case .collection:
-            return nil
+            return URL(string: "https://www.harvardartmuseums.org/collections?")
         case .magazine:
             return URL(string: "https://www.harvardartmuseums.org/index-magazine")
         case .about:
