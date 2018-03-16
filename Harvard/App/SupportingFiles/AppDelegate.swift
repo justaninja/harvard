@@ -14,7 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        guard let window = window else { fatalError("There should be a window") }
+
+        let coordinator = ScreenCoordinator(window: window)
+        coordinator
+            .setRootController(UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "Main"))
+
         return true
     }
 }

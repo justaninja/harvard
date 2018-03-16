@@ -12,6 +12,7 @@ import UIKit
 ///
 /// - highlights: Collection screen.
 /// - magazine: Magazine screen.
+/// - plan: Plan screen.
 /// - about: About screen.
 enum Screen: String {
 

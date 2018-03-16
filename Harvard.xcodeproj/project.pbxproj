@@ -15,6 +15,7 @@
 		CFCB553B2059048400E4F720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCB55392059048400E4F720 /* LaunchScreen.storyboard */; };
 		CFCB5557205922DE00E4F720 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB5556205922DE00E4F720 /* MainViewController.swift */; };
 		CFCB556020592EBA00E4F720 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB555F20592EBA00E4F720 /* Screen.swift */; };
+		CFCC8199205BD4CB00A56197 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCC8198205BD4CB00A56197 /* ScreenCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CFCB553C2059048400E4F720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFCB5556205922DE00E4F720 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../../../../harvard/Harvard/App/Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		CFCB555F20592EBA00E4F720 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		CFCC8198205BD4CB00A56197 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,7 @@
 		CFCB55422059055500E4F720 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CFCB555E20592C5500E4F720 /* Scenes */,
+				CFCB555E20592C5500E4F720 /* Screens */,
 				CFCB5555205922A800E4F720 /* Controllers */,
 				CFCB55452059057400E4F720 /* Storyboards */,
 				CFCB55442059056A00E4F720 /* Resources */,
@@ -113,12 +115,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		CFCB555E20592C5500E4F720 /* Scenes */ = {
+		CFCB555E20592C5500E4F720 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				CFCB555F20592EBA00E4F720 /* Screen.swift */,
+				CFCC8198205BD4CB00A56197 /* ScreenCoordinator.swift */,
 			);
-			path = Scenes;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFCB55312059048400E4F720 /* AppDelegate.swift in Sources */,
+				CFCC8199205BD4CB00A56197 /* ScreenCoordinator.swift in Sources */,
 				CFCB556020592EBA00E4F720 /* Screen.swift in Sources */,
 				CFCB5557205922DE00E4F720 /* MainViewController.swift in Sources */,
 				CF5396BA205A7E2B0039445A /* WebViewController.swift in Sources */,
