@@ -34,6 +34,10 @@ enum Screen: String {
         }
     }
 
+    private var barImage: UIImage? {
+        return UIImage(named: "\(rawValue)_gray")
+    }
+
     var title: String {
         return rawValue.capitalized
     }
@@ -45,6 +49,6 @@ enum Screen: String {
     }
 
     var barItem: UITabBarItem {
-        return UITabBarItem(title: title, image: nil, selectedImage: nil)
+        return UITabBarItem(title: nil, image: barImage, selectedImage: nil)
     }
 }
