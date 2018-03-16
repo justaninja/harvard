@@ -20,9 +20,23 @@ class MainViewController: UITabBarController {
         viewControllers?.removeAll()
 
         screens.forEach { screen in
-            guard let controller = screen.controller else { return }
+            let controller = UINavigationController()
+            controller.view.backgroundColor = UIColor.white
+            controller.isNavigationBarHidden = true
             controller.tabBarItem = screen.barItem
             viewControllers?.append(controller)
         }
+        viewControllers?.first?.addChildViewController(screens[0].controller!)
+    }
+
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        guard
+            let index = tabBar.items?.index(of: item),
+            let rootViewController = viewControllers?[index],
+            rootViewController.childViewControllers.isEmpty
+            else { return }
+
+        rootViewController.addChildViewController(screens[index].controller!)
+        print(rootViewController.childViewControllers)
     }
 }

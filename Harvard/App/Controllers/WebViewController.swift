@@ -21,11 +21,24 @@ class WebViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewDidLoad - ", url.lastPathComponent)
 
         webView.navigationDelegate = self
 
         let request = URLRequest(url: url)
         webView.load(request)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        print("viewDidAppear - ", url.lastPathComponent)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        print("viewWillDisappear - ", url.lastPathComponent)
     }
 }
 
