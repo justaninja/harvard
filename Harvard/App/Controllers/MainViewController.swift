@@ -26,17 +26,16 @@ class MainViewController: UITabBarController {
             controller.tabBarItem = screen.barItem
             viewControllers?.append(controller)
         }
-        viewControllers?.first?.addChildViewController(screens[0].controller!)
+        (viewControllers?.first as? UINavigationController)?.show(screens[0].controller!, sender: nil)
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         guard
             let index = tabBar.items?.index(of: item),
-            let rootViewController = viewControllers?[index],
+            let rootViewController = viewControllers?[index] as? UINavigationController,
             rootViewController.childViewControllers.isEmpty
             else { return }
 
-        rootViewController.addChildViewController(screens[index].controller!)
-        print(rootViewController.childViewControllers)
+        rootViewController.show(screens[index].controller!, sender: nil)
     }
 }
