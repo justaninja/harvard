@@ -14,9 +14,17 @@ class ScreenCoordinator {
     private var window: UIWindow
     private let screens: [Screen] = [.collection, .magazine, .plan, .about]
 
+    var currentViewController: UIViewController
+
     // MARK: - Inits
     init(window: UIWindow) {
         self.window = window
+
+        guard let rootViewController = window.rootViewController else {
+            fatalError("There should be a controller")
+        }
+
+        currentViewController = rootViewController
     }
 
     // MARK: - Methods
@@ -46,6 +54,8 @@ class ScreenCoordinator {
             navigationControllers[screenIndex].childViewControllers.isEmpty
             else { return }
 
-        navigationControllers[screenIndex].show(screens[screenIndex].controller, sender: nil)
+        currentViewController = screens[screenIndex].controller
+
+        navigationControllers[screenIndex].show(currentViewController, sender: nil)
     }
 }
