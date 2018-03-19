@@ -17,6 +17,6 @@ class MainViewController: UITabBarController {
             let index = tabBar.items?.index(of: item)
             else { return }
 
-        screenCoordinator?.transition(to: index)
+        screenCoordinator?.transition(toBar: index)
     }
 }

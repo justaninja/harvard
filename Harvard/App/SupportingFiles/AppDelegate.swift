@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let coordinator = ScreenCoordinator(window: window)
         coordinator
-            .setRootController(UIStoryboard(name: "Main", bundle: nil)
+            .setupRootController(UIStoryboard(name: "Main", bundle: nil)
                 .instantiateViewController(withIdentifier: "Main"))
         return true
     }

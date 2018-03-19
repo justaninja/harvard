@@ -12,9 +12,11 @@ class ScreenCoordinator {
 
     // MARK: - Properties
     private var window: UIWindow
-    private let screens: [Screen] = [.collection, .magazine, .plan, .about]
 
-    var currentViewController: UIViewController
+    /// The tab bar screens for the app.
+    private let barScreens: [Screen] = [.collection, .magazine, .plan, .about]
+
+    private var currentViewController: UIViewController
 
     // MARK: - Inits
     init(window: UIWindow) {
@@ -28,34 +30,43 @@ class ScreenCoordinator {
     }
 
     // MARK: - Methods
-    func setRootController(_ controller: UIViewController) {
-        window.rootViewController = controller
-
+    /// Setups the root view controller for the window.
+    ///
+    /// - Parameter controller: A new controller.
+    func setupRootController(_ controller: UIViewController) {
         guard
-            let mainController = window.rootViewController as? MainViewController
+            let mainViewController = controller as? MainViewController
             else { fatalError("There should be a controller") }
-        mainController.viewControllers?.removeAll()
-        mainController.screenCoordinator = self
 
-        screens.forEach { screen in
+        mainViewController.viewControllers?.removeAll()
+        mainViewController.screenCoordinator = self
+
+        window.rootViewController = mainViewController
+
+        barScreens.forEach { screen in
             let controller = UINavigationController()
             controller.view.backgroundColor = UIColor.white
             controller.isNavigationBarHidden = true
             controller.tabBarItem = screen.barItem
-            mainController.viewControllers?.append(controller)
+
+            mainViewController.viewControllers?.append(controller)
         }
-        transition(to: 0)
+
+        transition(toBar: 0)
     }
 
-    func transition(to screenIndex: Int) {
+    /// Sets a screen for a tab bar item.
+    ///
+    /// - Parameter index: A tab bar index.
+    func transition(toBar index: Int) {
         guard
             let mainController = window.rootViewController as? MainViewController,
             let navigationControllers = mainController.viewControllers,
-            navigationControllers[screenIndex].childViewControllers.isEmpty
+            navigationControllers[index].childViewControllers.isEmpty
             else { return }
 
-        currentViewController = screens[screenIndex].controller
+        currentViewController = barScreens[index].controller
 
-        navigationControllers[screenIndex].show(currentViewController, sender: nil)
+        navigationControllers[index].show(currentViewController, sender: nil)
     }
 }
