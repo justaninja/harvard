@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator
             .setRootController(UIStoryboard(name: "Main", bundle: nil)
                 .instantiateViewController(withIdentifier: "Main"))
-
         return true
     }
 }

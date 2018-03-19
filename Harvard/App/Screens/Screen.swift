@@ -43,8 +43,8 @@ enum Screen: String {
         return rawValue.capitalized
     }
 
-    var controller: UIViewController? {
-        let controller = storyboard.instantiateInitialViewController()
+    var controller: UIViewController {
+        let controller = storyboard.instantiateViewController(withIdentifier: "Web")
         (controller as? WebViewController)?.url = url
         return controller
     }
