@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwinjectStoryboard
 
 /// Represents screens for the app.
 ///
@@ -17,10 +18,6 @@ import UIKit
 enum Screen: String {
 
     case collection, magazine, plan, about
-
-    private var storyboard: UIStoryboard {
-        return UIStoryboard(name: "Web", bundle: nil)
-    }
 
     private var url: URL? {
         switch self {
@@ -44,7 +41,10 @@ enum Screen: String {
     }
 
     var controller: UIViewController {
-        let controller = storyboard.instantiateViewController(withIdentifier: "Web")
+        let controller = SwinjectStoryboard
+            .create(name: "Web", bundle: nil)
+            .instantiateViewController(withIdentifier: "Web")
+
         (controller as? WebViewController)?.url = url
         return controller
     }
