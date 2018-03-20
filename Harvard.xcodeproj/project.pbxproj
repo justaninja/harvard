@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B4C5A8016CF981351CB0D7D /* Pods_Harvard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B84B59EEE2E35B976B6EA8B /* Pods_Harvard.framework */; };
 		CF5396BA205A7E2B0039445A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5396B9205A7E2B0039445A /* WebViewController.swift */; };
 		CF5396BC205A855A0039445A /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5396BB205A855A0039445A /* Web.storyboard */; };
+		CF6B2E28205FC2FA00343712 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B2E27205FC2FA00343712 /* R.generated.swift */; };
 		CFCB55312059048400E4F720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB55302059048400E4F720 /* AppDelegate.swift */; };
 		CFCB55362059048400E4F720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCB55342059048400E4F720 /* Main.storyboard */; };
 		CFCB55382059048400E4F720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFCB55372059048400E4F720 /* Assets.xcassets */; };
@@ -19,8 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B84B59EEE2E35B976B6EA8B /* Pods_Harvard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Harvard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40513B5F54B5E8D9E8D5BEE5 /* Pods-Harvard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Harvard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Harvard/Pods-Harvard.debug.xcconfig"; sourceTree = "<group>"; };
 		CF5396B9205A7E2B0039445A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CF5396BB205A855A0039445A /* Web.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
+		CF6B2E27205FC2FA00343712 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CFCB552D2059048400E4F720 /* Harvard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harvard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCB55302059048400E4F720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFCB55352059048400E4F720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		CFCB5556205922DE00E4F720 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../../../../harvard/Harvard/App/Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		CFCB555F20592EBA00E4F720 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		CFCC8198205BD4CB00A56197 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
+		D0396A73D0CFD4CCF2C2B1E0 /* Pods-Harvard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Harvard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Harvard/Pods-Harvard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4C5A8016CF981351CB0D7D /* Pods_Harvard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180130473FA71D448B8F1724 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B84B59EEE2E35B976B6EA8B /* Pods_Harvard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD516BA9369F9F3168BF35BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40513B5F54B5E8D9E8D5BEE5 /* Pods-Harvard.debug.xcconfig */,
+				D0396A73D0CFD4CCF2C2B1E0 /* Pods-Harvard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CFCB55242059048400E4F720 = {
 			isa = PBXGroup;
 			children = (
 				CFCB552F2059048400E4F720 /* Harvard */,
 				CFCB552E2059048400E4F720 /* Products */,
+				AD516BA9369F9F3168BF35BD /* Pods */,
+				180130473FA71D448B8F1724 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +108,7 @@
 		CFCB55432059055B00E4F720 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				CF6B2E27205FC2FA00343712 /* R.generated.swift */,
 				CFCB553C2059048400E4F720 /* Info.plist */,
 				CFCB55302059048400E4F720 /* AppDelegate.swift */,
 			);
@@ -131,10 +158,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFCB553F2059048400E4F720 /* Build configuration list for PBXNativeTarget "Harvard" */;
 			buildPhases = (
+				E12D591321200475054D1E5A /* [CP] Check Pods Manifest.lock */,
+				CF6B2E26205FC23A00343712 /* ShellScript */,
 				CFCB55292059048400E4F720 /* Sources */,
 				CFCB552A2059048400E4F720 /* Frameworks */,
 				CFCB552B2059048400E4F720 /* Resources */,
 				CFCB55462059067200E4F720 /* Swiftlint */,
+				29C27575559226DE3D0F554F /* [CP] Embed Pods Frameworks */,
+				E89ADF5A56D61182F64CFAE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +225,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		29C27575559226DE3D0F554F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Harvard/Pods-Harvard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Harvard/Pods-Harvard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF6B2E26205FC23A00343712 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
 		CFCB55462059067200E4F720 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +274,39 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		E12D591321200475054D1E5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Harvard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E89ADF5A56D61182F64CFAE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Harvard/Pods-Harvard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -216,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFCB55312059048400E4F720 /* AppDelegate.swift in Sources */,
+				CF6B2E28205FC2FA00343712 /* R.generated.swift in Sources */,
 				CFCC8199205BD4CB00A56197 /* ScreenCoordinator.swift in Sources */,
 				CFCB556020592EBA00E4F720 /* Screen.swift in Sources */,
 				CFCB5557205922DE00E4F720 /* MainViewController.swift in Sources */,
@@ -354,6 +454,7 @@
 		};
 		CFCB55402059048400E4F720 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40513B5F54B5E8D9E8D5BEE5 /* Pods-Harvard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,6 +471,7 @@
 		};
 		CFCB55412059048400E4F720 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0396A73D0CFD4CCF2C2B1E0 /* Pods-Harvard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
