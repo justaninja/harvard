@@ -12,12 +12,6 @@ class MainViewController: UITabBarController {
 
     var screenCoordinator: ScreenCoordinator?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        print("---MainViewController - loaded")
-    }
-
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         guard
             let index = tabBar.items?.index(of: item)

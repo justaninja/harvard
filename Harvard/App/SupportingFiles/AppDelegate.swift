@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swinject
 import SwinjectStoryboard
 
 @UIApplicationMain
@@ -18,18 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         guard let window = window else { fatalError("There should be a window") }
 
-        let defaultContainer = SwinjectStoryboard.defaultContainer
-        let coordinator = ScreenCoordinator(window: window)
+        let container = Container()
 
-        defaultContainer.register(ScreenCoordinator.self) { _ in  coordinator }
+        container.register(ScreenCoordinator.self) { _ in  ScreenCoordinator(window: window) }
 
-        defaultContainer.storyboardInitCompleted(MainViewController.self) { r, c in
-            c.screenCoordinator = r.resolve(ScreenCoordinator.self)!
+        container.storyboardInitCompleted(MainViewController.self) { r, c in
+            c.screenCoordinator = r.resolve(ScreenCoordinator.self)
         }
 
-        defaultContainer.storyboardInitCompleted(WebViewController.self) { (_, _) in }
+        container.storyboardInitCompleted(WebViewController.self) { (_, _) in }
 
-        coordinator
+        container
+            .resolve(ScreenCoordinator.self)?
             .setupRootController(SwinjectStoryboard
                 .create(name: "Main", bundle: nil)
                 .instantiateViewController(withIdentifier: "Main"))
