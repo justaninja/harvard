@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Swinject
 
 class ScreenCoordinator {
 
     // MARK: - Properties
-    private var window: UIWindow
+    private let window: UIWindow
+    private let container: Container
 
     /// The tab bar screens for the app.
     private let barScreens: [Screen] = [.collection, .magazine, .plan, .about]
@@ -19,8 +21,9 @@ class ScreenCoordinator {
     private var currentViewController: UIViewController
 
     // MARK: - Inits
-    init(window: UIWindow) {
+    init(window: UIWindow, container: Container) {
         self.window = window
+        self.container = container
 
         guard let rootViewController = window.rootViewController else {
             fatalError("There should be a controller")
@@ -62,10 +65,13 @@ class ScreenCoordinator {
         guard
             let mainController = window.rootViewController as? MainViewController,
             let navigationControllers = mainController.viewControllers,
-            navigationControllers[index].childViewControllers.isEmpty
+            navigationControllers[index].childViewControllers.isEmpty,
+            let newViewController = container.resolve(WebViewController.self)
             else { return }
 
-        currentViewController = barScreens[index].controller
+        newViewController.url = barScreens[index].url
+
+        currentViewController = newViewController
 
         navigationControllers[index].show(currentViewController, sender: nil)
     }

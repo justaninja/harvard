@@ -12,7 +12,7 @@
         <!--Web View Controller-->
         <scene sceneID="Afd-Gp-m12">
             <objects>
-                <viewController storyboardIdentifier="Web" id="9gc-UE-Zp9" customClass="WebViewController" customModule="Harvard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webController" id="9gc-UE-Zp9" customClass="WebViewController" customModule="Harvard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ca-jF-LZG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

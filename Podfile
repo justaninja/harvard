@@ -7,7 +7,6 @@ target 'Harvard' do
 
   # Pods for Harvard
   	pod 'Swinject'
-    pod 'SwinjectStoryboard'
 	pod 'R.swift'
 
 end

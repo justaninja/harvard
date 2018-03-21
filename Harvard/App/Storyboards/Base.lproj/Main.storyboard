@@ -27,7 +27,7 @@
         <!--Main View Controller-->
         <scene sceneID="Ydc-K8-x4u">
             <objects>
-                <tabBarController storyboardIdentifier="Main" id="HYc-zJ-Y5Q" customClass="MainViewController" customModule="Harvard" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainController" id="HYc-zJ-Y5Q" customClass="MainViewController" customModule="Harvard" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="fAF-Xz-ntr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

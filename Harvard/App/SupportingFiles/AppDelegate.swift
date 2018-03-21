@@ -8,7 +8,6 @@
 
 import UIKit
 import Swinject
-import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,19 +20,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let container = Container()
 
-        container.register(ScreenCoordinator.self) { _ in  ScreenCoordinator(window: window) }
+        container
+            .register(ScreenCoordinator.self) { _ in  ScreenCoordinator(window: window, container: container) }
 
-        container.storyboardInitCompleted(MainViewController.self) { r, c in
-            c.screenCoordinator = r.resolve(ScreenCoordinator.self)
+        container
+            .register(MainViewController.self) { r in
+                let controller = R.storyboard.main.mainController()
+                controller?.screenCoordinator = r.resolve(ScreenCoordinator.self)
+                return controller!
         }
 
-        container.storyboardInitCompleted(WebViewController.self) { (_, _) in }
+        container
+            .register(WebViewController.self) { _ in R.storyboard.web.webController()! }
+
+        let mainController = container.resolve(MainViewController.self)!
 
         container
             .resolve(ScreenCoordinator.self)?
-            .setupRootController(SwinjectStoryboard
-                .create(name: "Main", bundle: nil)
-                .instantiateViewController(withIdentifier: "Main"))
+            .setupRootController(mainController)
 
         return true
     }
